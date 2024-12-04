@@ -1,10 +1,9 @@
-import express from 'express';
-import dotenv from 'dotenv';
-dotenv.config();
+const express = require('express');
+require ('dotenv').config();
 const app = express();
 const port = process.env.PORT || 7856;
 app .use(express.json());
-app.use('/notes',require(':/routes/NoteRoutes'))
+app.use('/notes',require('./routes/NoteRoutes'))
 
 
 app.get('/', (req, res) => {
