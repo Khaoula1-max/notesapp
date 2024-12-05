@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
- router.post ('/', (req, res) => {
-    res.send('Hello World!')
-    });
+const { addTags } = require('../controllers/NoteController');
 
-    module.exports =router
+router.post('/tags', addTags);
+
+module.exports = router;
